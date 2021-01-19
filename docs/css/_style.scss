@@ -1,0 +1,235 @@
+/*Estilos para todos los div del DOM */
+.contenedor{
+    width:1300px;
+    height: 1000px;
+    //background: $primary-color1; //Ayudas visuales para la maquetacion (Quitar esto despues)
+    margin: 1px auto;
+    padding: 1px;
+    //border: solid black 1px; //Ayudas visuales para la maquetacion (Quitar esto despues)
+}
+
+.header{
+    background: url(../img/placeimg_800_400_tech.jpg) center/cover;
+    height: 20%;
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    //background: #a4a4a4; //Ayudas visuales para la maquetacion (Quitar esto despues)
+    border-radius: 1em;
+    margin: 1em;
+    padding: 1em;
+}
+
+.nav{
+    height: 5%;
+   // background: #a4a4a4; //Ayudas visuales para la maquetacion (Quitar esto despues)
+    border-radius: 1em;
+    margin: 1em;
+    padding: 1em;
+    align-items: center; 
+    ul{
+       
+        list-style: none;
+        padding: 1;
+        margin: 1;
+        li {
+            display: inline-block;
+        }
+        a{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+            font-size: 25px;   
+            
+            text-decoration: none;
+            color: black;
+            padding: 12px;
+            display: block;  
+            border-radius:1em; 
+        }
+        a:hover{
+            background-color:$shadow;
+           
+        }
+    }
+}
+
+.contenido{
+    height: 55%;
+    //background: #a4a4a4; //Ayudas visuales para la maquetacion (Quitar esto despues)
+    //border: solid black 1px; //Ayudas visuales para la maquetacion (Quitar esto despues)
+    margin: 1em;
+    padding: 1em;
+}
+//contenedor izquierdo de textos
+.contenido-izq{
+    height: 100%;
+    width: 55%;
+    //background: #a4a4a4; //Ayudas visuales para la maquetacion (Quitar esto despues)
+    border-radius: 1em;
+    margin: 0.1em;
+    padding: 0.5em;
+    float: left;
+
+    h1{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 55px;
+        color:black;
+       
+    }
+
+    .contenido-izq-articulos{
+        font-size: 16px;
+        font-family: Calibri, Arial, Helvetica, sans-serif;
+        p{
+            color: black;
+            text-align: justify;
+            padding: 1em;
+        }
+        h2{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 20px;
+        }
+    }
+}
+
+%button {
+    border-radius: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    color: #fff;
+    filter: brightness(90%);
+    /*operador &*/
+    &:hover {
+      filter: brightness(110%);
+    }
+  }
+//Contenedor de la derecha que tiene el formulario
+.contenido-der{
+    height: 100%;
+    width: 44%;
+    //background: #a4a4a4; //Ayudas visuales para la maquetacion (Quitar esto despues)
+    border: solid black 5px; 
+    border-radius: 1em;
+    margin: 0.1em;
+    padding: 0.5em;
+    float: right;
+    h1{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 55px;
+        color:black;
+    }
+
+    form {
+        background: $bg-secondary;
+        width: 100%;
+        margin: 5px auto;
+        padding: 5px;
+        border-radius: 10px;
+        border: 1px solid $border-primary;
+        input {
+          border-radius: 5px;
+          border: 1px solid $border-primary;
+          width: 100%;
+          padding: 10px;
+          display: block;
+          &:focus {
+            border: 1px dashed $btn-primary;
+          }
+        }
+        label {
+          display: inline-block;
+          margin: 10px 0;
+        }
+
+        .botones {
+          width: 100%;
+          text-align: center;
+          margin: 20px 0 0 0;
+          button[type='submit'] {
+            @extend %button;
+            background: $btn-primary;
+          }
+        }
+      }
+    .signing-btn{
+        button{
+            font-size: 1rem;
+            margin-right: 20px;
+            border-radius: 1px;
+            border: 1px dashed #000;
+            padding: 20px 30px;
+            background-color: $bg-primary;
+            &:hover{
+                background-color: $shadow;
+                border: 1px dotted #000;
+            }
+        }
+    }
+
+}
+
+%circle{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    box-shadow: -3px 0px 0px 1px $bg-primary;
+    line-height: 40px;
+    text-align: center;
+}
+
+.footer{
+    height: 10%;
+    //background: #a4a4a4; //Ayudas visuales para la maquetacion (Quitar esto despues)
+    //border: solid black 1px; //Ayudas visuales para la maquetacion (Quitar esto despues)
+    margin: 1em;
+    padding: 1em;
+ 
+    p{
+        padding: 20px 0;
+        float: left;
+    }
+}
+.contact{
+    padding: 10px;
+    float: right;
+    a{
+        text-decoration: none;
+        img{
+            /*extendido estilo*/
+            @extend %circle;
+            /*diferente*/
+            line-height: unset;
+            margin-left: 20px;
+            padding: 10px;
+            border: none;
+            &:hover{
+                background: $shadow;
+            }
+        }
+    }
+}
+
+.contenido-izq-orador{
+   // background: #a4a4a4; //Ayudas visuales para la maquetacion (Quitar esto despues)
+   // border: solid black 1px; //Ayudas visuales para la maquetacion (Quitar esto despues)
+    width: 95%;
+    display: flex; 
+    margin: 0.5em;
+    padding: 0.1em;
+    .img-orador{
+        background: url(../img/silueta.png) center/cover;
+       // border: solid black 1px; //Ayudas visuales para la maquetacion (Quitar esto despues)
+       border-radius:70%;
+       width: 100px;
+       height: 100px;
+       margin: 1em;
+       padding: 1em;
+    }
+    p{
+        color: black;
+        text-align: justify;
+        padding: 1em;
+        font-size: 25px;
+    }
+}
